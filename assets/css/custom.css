@@ -1,0 +1,39 @@
+.page-header {
+  background-image: linear-gradient(to right,
+  #b72d34 0%,
+  #c9453e 33%,
+  #da5c4a 66%,
+  #e76f51 100%
+  );
+}
+
+.main-content h1, 
+.main-content h2, 
+.main-content h3, 
+.main-content h4, 
+.main-content h5, 
+.main-content h6 {
+  color: #da5c4a;
+}
+
+.page-header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.page-header a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.main-content a, 
+footer a {
+  color: #b72d34;
+  text-decoration: none;
+}
+
+.main-content a:hover, 
+footer a:hover {
+  color: #b72d34;
+  text-decoration: underline;
+}
