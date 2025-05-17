@@ -1,0 +1,6 @@
+---
+layout: default
+permalink: /events/2025-11-08-matsue_1st
+title: イベント情報
+---
+Matsue 1st PAGE
