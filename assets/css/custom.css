@@ -86,3 +86,11 @@ footer a:hover {
     line-height: 1.2;
   }
 }
+
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ffffff;
+  clear: both;
+}
