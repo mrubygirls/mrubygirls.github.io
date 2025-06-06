@@ -79,8 +79,10 @@ footer a:hover {
     flex: 1;
   }
   h1 {
-    height: 80px;
+    min-height: 80px;
     font-size: 43px;
     font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
 }
