@@ -37,3 +37,50 @@ footer a:hover {
   color: #b72d34;
   text-decoration: underline;
 }
+
+.container {
+  height: 100%;
+}
+
+.team img {
+  float: left;
+  width: 48px;
+  border: 1px solid #ddd;
+  margin-right: 15px;
+}
+
+.coach {
+  display: inline;
+  float: left;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  img {
+    border-radius: 50px;
+  }
+}
+
+.event {
+  .event-info {
+    display: flex;
+  }
+  .event-description {
+    flex: 2;
+  }
+  .event-image {
+    flex: 1;
+  }
+  .program {
+    display: flex;
+  }
+  .schedule {
+    flex: 2;
+  }
+  .information {
+    flex: 1;
+  }
+  h1 {
+    height: 80px;
+    font-size: 43px;
+    font-weight: bold;
+  }
+}
