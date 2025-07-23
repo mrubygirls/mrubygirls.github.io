@@ -11,15 +11,15 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
 
       <p>こんにちは、世界！</p>
 
-      <p>mrubyを体験できるワークショップ mruby Girls が</p>
+      <p>mruby (PicoRuby) を体験できるワークショップ mruby Girls が</p>
       <p>Rubyの聖地　松江から始まります！！！</p>
 
-      <p>mrubyでLEDを光らせたり、温度を測ったり、</p>
-      <p>mrubyで組み込みの世界を楽しみましょう！</p>
+      <p> <a href="https://docs.m5stack.com/ja/core/ATOM%20Matrix">ATOM Matrix</a> を使って、組み込みの世界を楽しみましょう！</p>
 
       <ul>
         <li>対象者：プログラミング経験がある女性（経験年数は問いません。）</li>
-        <li>必要なもの：ノートパソコン、好奇心</li>
+        <li>必要なもの：ノートパソコン、ノートパソコンとマイコンをつなぐType-Cケーブル、好奇心</li>
+        <li>やらないこと：はんだ付け</li>
       </ul>
 
       {% include sns_share.html %}
@@ -33,13 +33,21 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
   <div class="program">
     <div class="schedule">
       <h3>2025/11/08(土)</h3>
-        詳細は検討中
+        10:00  会場オープン<br/>
+        16:00  ワークショップ終了<br/>
+        <br/>
+        ランチは、みんなで食べに行く予定です。
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        お問い合わせは、mrubygirls at googlegroups.com まで
     </div>
 
     <div class="information">
       <h3>Information</h3>
       <p>会場：<a href="https://maps.app.goo.gl/HxrCmRhqWw3Yswoj9">松江オープンソースラボ</a></p>
-      <p>申込み開始：準備中(9月頃を予定)</p>
+      <p>申込受付中：お申し込みは <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSz7XLfPQL8tn7th__f-PQgl5hXtFUW5qOwJN-4vs48x_D6g/viewform?usp=dialog">こちら</a></p>
     </div>
   </div>
 
