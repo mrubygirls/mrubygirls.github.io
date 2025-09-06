@@ -64,7 +64,7 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
           <div class="plan-time">14:00  ワークショップ</div>
           <div class="plan-description">
             PicoRubyといろいろなセンサーを組み合わせて、<br/>
-            自分だけのガジェットを作ってみよう!
+            自分だけのガジェットを作ってみましょう!
           </div>
         </div>
         <div class="plan">
