@@ -78,6 +78,15 @@ footer a:hover {
   .information {
     flex: 1;
   }
+  .plan {
+   }
+  .plan-time {
+    font-weight: bold;
+  }
+  .plan-description {
+    padding-left: 50px;
+   }
+
   h1 {
     min-height: 80px;
     font-size: 43px;

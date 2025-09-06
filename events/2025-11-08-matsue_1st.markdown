@@ -18,7 +18,7 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
 
       <ul>
         <li>対象者：プログラミング経験がある女性（経験年数は問いません。）</li>
-        <li>必要なもの：ノートパソコン、ノートパソコンとマイコンをつなぐType-Cケーブル、好奇心</li>
+        <li>必要なもの：ノートパソコン、ノートパソコンとAtom MatrixをつなぐType-Cケーブル、好奇心</li>
         <li>やらないこと：はんだ付け</li>
       </ul>
 
@@ -33,11 +33,52 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
   <div class="program">
     <div class="schedule">
       <h3>2025/11/08(土)</h3>
-        10:00  会場オープン<br/>
-        16:00  ワークショップ終了<br/>
-        <br/>
-        ランチは、みんなで食べに行く予定です。
-        <br/>
+        <div class="plan">
+          <div class="plan-time"> 10:00  会場オープン</div>
+          <div class="plan-description">
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-time">10:30  オープニング</div>
+          <div class="plan-description">
+            1日の流れをオーガナイザーから説明します。
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-time">10:35  ワークショップ</div>
+          <div class="plan-description">
+            自己紹介<br/>
+            自分のPCに環境構築をしましょう!<br/>
+            PicoRubyでできること知りましょう!<br/>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-time">13:00  ランチ</div>
+          <div class="plan-description">
+            前半のワークショップの気づきと、<br/>
+            後半のワークショップでやってみたいことを話しながら、<br/>
+            みんなで楽しくランチを食べましょう!
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-time">14:00  ワークショップ</div>
+          <div class="plan-description">
+            PicoRubyといろいろなセンサーを組み合わせて、<br/>
+            自分だけのガジェットを作ってみよう!
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-time">15:20  発表会</div>
+          <div class="plan-description">
+            作ったものを、みんなに見てもらいましょう!
+          </div>
+        </div>
+        <div class="plan">
+          <div class="plan-time">16:00  ワークショップ終了</div>
+          <div class="plan-description">
+            お疲れ様でした！
+          </div>
+        </div>
         <br/>
         <br/>
         <br/>
