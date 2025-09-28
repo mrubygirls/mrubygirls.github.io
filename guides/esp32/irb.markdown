@@ -80,7 +80,7 @@ exit
 irbを起動してください
 
 ```
-b = GPIO.new(39, GPIO::IN, GPIO::PULL_UP)
+b = GPIO.new(39, GPIO::IN)
 I (22970) gpio: GPIO[39]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
 => #<GPIO:3ffb6738>
 ```
@@ -102,7 +102,6 @@ b.read
 - GPIO = マイコンが外の世界とやりとりする窓口で電気のON/OFFを読んだり、出したりできます。
 - 39 → ATOM Matrixでボタンがつながってる場所
 - GPIO::IN → 読み取り専用（INput = 入力）
-- GPIO::PULL_UP → 電気的に安定させるための指定（一旦はそういうものだと思ってもらって大丈夫です）
 
 これから先やっていくことの基本は全てこれです。
 取得したり、指示を出したいセンサーと繋がるピン番号、それが何用かを指定し、値を読み取ったり書き込んだりしていきます。
