@@ -16,7 +16,7 @@ gem "minima", "~> 2.5"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-remote-theme", "~> 0.4.3"
+  gem "jekyll-theme-cayman", "~> 0.2.0"
 end
 gem "logger"
 
