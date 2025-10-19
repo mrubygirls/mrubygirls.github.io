@@ -15,4 +15,9 @@ ATOM MatrixというESP32ベースのマイコンで、PicoRuby（軽量Ruby）�
 - [irb](/guides/esp32/irb)
 
 ## 3 センサーを使って自分だけのデバイスを作ろう
-- Atom Matrixでできること
+- [ボタン](/guides/esp32/button)
+- [LED](/guides/esp32/led)
+- [加速度センサー](/guides/esp32/accel)
+- 組み合わせて使ってみよう
+  - [LEDアニメーション](/guides/esp32/led_anim)
+  - [水準器]((/guides/esp32/tilt_led))
