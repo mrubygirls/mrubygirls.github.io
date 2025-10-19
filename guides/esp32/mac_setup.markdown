@@ -166,13 +166,27 @@ sudo gem install bundler
 rake setup_esp32
 ```
 
-このコマンドで以下が実行されます：
+このコマンドで以下が実行されます
 - PicoRubyのビルドに必要なRuby依存関係のインストール
 - PicoRubyのビルド
 - ESP32ターゲットの設定
 
-プロジェクトのビルド：
 
+mruby Girls Matsue 1st のワークショップの場合は以下のファイルを編集して追加してください。
+ワークショップで使うGemを追加します(LEDと加速度センサー用gem)
+
+R2P2/components/picoruby-esp32/picoruby/build_config/xtensa-esp.rb
+
+```ruby
+  conf.gem core: 'picoruby-pwm'
+
+  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'main' # 追加
+  conf.gem github: 'bash0C7/picoruby-mpu6886', branch: 'main' # 追加
+
+  conf.picoruby(alloc_libc: false)
+```
+
+プロジェクトのビルド
 ```bash
 rake build
 ```
@@ -228,7 +242,7 @@ ESPPORT=/dev/cu.usbserial-XXXX rake monitor
 
 ### 4.3 一括実行
 
-ビルド、書き込み、モニターを一括で実行：
+ビルド、書き込み、モニターを一括で実行
 
 ```bash
 rake
@@ -236,7 +250,7 @@ rake
 
 ## 5. PicoRuby Shellの確認
 
-書き込みが成功すると、シリアルモニターに以下が表示されます：
+書き込みが成功すると、シリアルモニターに以下が表示されます
 
 ```
 Starting shell...
@@ -285,7 +299,6 @@ export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
 rake clean
 rake setup_esp32
 ```
-
 
 ## 参考リンク
 
