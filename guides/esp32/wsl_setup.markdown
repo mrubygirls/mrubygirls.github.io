@@ -34,7 +34,7 @@ sudo apt-get update
 sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
 
-1.3 ESP-IDFのインストール
+### 1.3 ESP-IDFのインストール
 ESP32用のツールをインストールします
 
 作業ディレクトリの作成
