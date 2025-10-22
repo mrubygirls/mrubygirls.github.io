@@ -18,18 +18,55 @@ Atom Matrixの25個のLEDが組み込まれています
 20 21 22 23 24
 ```
 
+## gemのインストール
+
+WS2812をESP32で使うために必要なことがあるのですが、今回は、あらかじめ、簡単に利用できるようにしたgemを使います
+
+
+PCで `R2P2-ESP32/components/picoruby-esp32/picoruby/build_config/xtensa-esp.rb`
+この設定ファイルを開いて以下を追加してください
+
+```ruby
+  conf.gem core: 'picoruby-pwm'
+
+  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'main' # 追加
+
+  conf.picoruby(alloc_libc: false)
+```
+
+シリアルモニタを立ち上げている場合は一度 `Ctl+]` で終了してください
+
+追加した設定ファイルの状態で、再度buildして、追加したgemを取り込みます。
+
+```
+rake clean build
+```
+
+この内容でマイコンに書き込みます。
+
+```
+rake flash
+```
+
+再度シリアルモニターを立ち上げます。
+```
+rake monitor
+```
+
 ## IRBで点灯
 
-まずは1つ点灯させてみあす。
+まずは1つ点灯させます。
 これは最初にインストールしたWS2812 gemを読み込むためのコードです。WS2812というLEDを簡単に制御できるgemを使います。
 
-シリアルモニターで、irbを起動してください（終了していた場合は）
+シリアルモニターで、irbを起動してください
 
 ```
 $> irb
 irb>
 ```
 
+以下を打ち込んでください。先ほど追加したgemを使うので `require 'ws2812'` としています。
+27というのは、AtomMatrixでLEDが繋がっているpinの番号です。
 
 ```ruby
 require 'ws2812'
@@ -40,7 +77,7 @@ led = WS2812.new(rmt)
 led.show_rgb([255, 0, 0])
 ```
 
-左上、0番目のLEDが赤になりました
+左上、0番目のLEDが赤になりました。
 
 show_hexメソッドを使うと16進でも色を指定できます
 ```ruby
@@ -110,6 +147,25 @@ led.show_rgb(*pixels)
 ```
 
 
+PCに保存したファイルをマイコンに転送します
+
+```
+rake flash
+```
+
+もう一度シリアルモニターを立ち上げます
+
+
+```
+rake monitor
+```
+
+シリアルモニターで `ls` を実行すると先ほど転送したファイルが見えます。
+
+```
+$> ls
+square.rb
+```
 
 
 このファイルを実行します
