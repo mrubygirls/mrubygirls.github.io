@@ -4,7 +4,7 @@ permalink: /guides/esp32/wsl_setup
 title: Windows(WSL)向けセットアップ
 ---
 # Windows(WSL)向けセットアップ
-このガイドでは、Windows環境のWSL (Windows Subsystem for Linux) を使用して、ATOM MatrixでPicoRubyを動作させるためのR2P2-ESP32環境を構築する手順を説明します。
+このガイドでは、Windows環境のWSL (Windows Subsystem for Linux) を使用して、PicoRubyを動作させるためのR2P2-ESP32環境を構築する手順を説明します。
 
 ## 前提
 WSLを利用します。過去利用したことがあって以下のものがインストール済みの場合は次のステップに進んでください。
@@ -83,9 +83,9 @@ winget install --interactive --exact dorssel.usbipd-win
 「Close」を押す
 
 ### 1.5 USBデバイスの認識確認
-ここで一旦**ATOM Matrixを接続して**動作確認をします
+ここで一旦**マイコンを接続して**動作確認をします
 
-ATOM MatrixをPCに接続して、PowerShellで以下を実行
+マイコンをPCに接続して、PowerShellで以下を実行
 
 ```powershell
 usbipd list
@@ -141,7 +141,7 @@ rake build
 ビルドが成功すると、`build`ディレクトリにファームウェアが生成されます。
 
 ## 3. デバイス接続と書き込み
-USBでAtomMatrixをパソコンと繋いでください
+USBでマイコンをパソコンと繋いでください
 ### 3.1 USBデバイスのバインド（Windows側）
 
 **PowerShellを管理者権限で新しく開き**、以下を実行
@@ -182,7 +182,7 @@ ls /dev/tty*
 ## 4. ファームウェアの書き込みと実行
 
 ### 4.1 書き込み
-プログラム環境とファイルをATOM Matrixに転送します。
+プログラム環境とファイルをマイコンに転送します。
 
 WSLのターミナルで､以下を実行
 ```bash
@@ -202,7 +202,7 @@ ESPBAUD=115200 rake flash
 ```
 
 ### 4.2 シリアルモニターの起動
-ATOM Matrixからの出力メッセージを表示し、コマンドを送信できる通信画面(=シリアルモニタ)を起動します。以下を実装します。
+マイコンからの出力メッセージを表示し、コマンドを送信できる通信画面(=シリアルモニタ)を起動します。以下を実装します。
 
 ```bash
 rake monitor
@@ -222,9 +222,9 @@ rake
 
 ![WSL R2P2](/images/guides/wsl_r2p2.png)
 
-これで、ATOM MatrixでPicoRubyコードを実行できる環境が整いました！
+これで、マイコンでPicoRubyコードを実行できる環境が整いました！
 
-終了するときは  `Ctr + ]` で終わってください
+終了するときは  `Ctl + ]` で終わってください
 
 ## トラブルシューティング
 

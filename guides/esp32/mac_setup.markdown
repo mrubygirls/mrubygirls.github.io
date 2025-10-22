@@ -3,15 +3,9 @@ layout: default
 permalink: /guides/esp32/mac_setup
 title: Mac向けセットアップ
 ---
-# ATOM Matrix用 R2P2-ESP32 環境構築ガイド (macOS編)
+# R2P2-ESP32 環境構築ガイド (macOS編)
 
-このガイドでは、macOS環境でATOM MatrixにPicoRubyを動作させるためのR2P2-ESP32環境を構築する手順を説明します。
-
-## 前提条件
-
-- macOS 10.15 (Catalina) 以降
-- ATOM Matrixデバイス  
-- USB Type-Cケーブル
+このガイドでは、macOS環境でPicoRubyを動作させるためのR2P2-ESP32環境を構築する手順を説明します。
 
 ## 1.  macOS環境の準備
 
@@ -112,7 +106,7 @@ cd ~/esp/esp-idf
 
 ### 1.7 デバイス接続の確認（オプション）
 
-ATOM Matrixを接続して、シリアルポートを確認：
+マイコンを接続して、シリアルポートを確認：
 
 ```bash
 ls /dev/cu.*
@@ -181,9 +175,9 @@ rake build
 
 # 3. デバイス接続と書き込み
 
-### 3.1 ATOM Matrixの接続
+### 3.1 マイコンの接続
 
-USB Type-CケーブルでATOM MatrixをPCに接続します。
+USB ケーブルでマイコンPCに接続します。
 
 ### 3.2 デバイスの確認
 
@@ -243,7 +237,7 @@ PICORUBY
 $>
 ```
 
-これで、ATOM MatrixでPicoRubyコードを実行できる環境が整いました！
+これで、マイコンでPicoRubyコードを実行できる環境が整いました！
 
 ![Mac R2P2](/images/guides/mac_r2p2.png)
 
@@ -289,4 +283,3 @@ rake setup_esp32
 
 - [R2P2-ESP32 GitHub](https://github.com/picoruby/R2P2-ESP32)
 - [ESP-IDF Documentation v5.4.2](https://docs.espressif.com/projects/esp-idf/en/v5.4.2/)
-- [ATOM Matrix Documentation](https://docs.m5stack.com/en/core/atom_matrix)
