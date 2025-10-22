@@ -19,7 +19,7 @@ ESP-IDFはESP32の開発環境です。
 
 ## 1. WSL環境の準備
 ### 1.1 WSLの起動
-Windowsターミナルを開きます（スタートメニューで「Terminal」と検索）
+ターミナルを開きます（スタートメニューで「Powershell」と検索）
 ```powershell
 wsl
 ```
