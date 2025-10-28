@@ -1,0 +1,137 @@
+/* 各イベントページ */
+.event {
+  .event-info {
+    display: flex;
+  }
+  .event-description {
+    flex: 2;
+  }
+  .event-image {
+    flex: 1;
+  }
+  .program {
+    display: flex;
+  }
+  .schedule {
+    flex: 2;
+  }
+  .information {
+    flex: 1;
+  }
+  .plan {
+   }
+  .plan-time {
+    font-weight: bold;
+  }
+  .plan-description {
+    padding-left: 50px;
+   }
+
+  h1 {
+    min-height: 80px;
+    font-size: 43px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+}
+
+/* Eventsページ */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 基本は3列 */
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* 画面幅が小さいときは2列 */
+@media (max-width: 960px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* スマホでは1列 */
+@media (max-width: 640px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* カード全体の見た目は前と同じ */
+.event-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card-content {
+  padding: 1rem 1.2rem;
+}
+
+.event-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: #b72d34;
+  font-weight: bold;
+}
+
+.event-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.event-desc {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.event-tag {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.event-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #e84c7a;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #e84c7a;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.event-link:hover {
+  background: #e84c7a;
+  color: #fff;
+}
