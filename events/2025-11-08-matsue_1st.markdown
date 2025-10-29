@@ -82,13 +82,30 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
         <br/>
         <br/>
         <br/>
-        お問い合わせは、mrubygirls at googlegroups.com まで
+        お問い合わせは、mrubygirls.organizers at gmail.com まで
     </div>
 
     <div class="information">
       <h3>Information</h3>
       <p>会場：<a href="https://maps.app.goo.gl/HxrCmRhqWw3Yswoj9">松江オープンソースラボ</a></p>
-      <p>申込受付中：お申し込みは <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSz7XLfPQL8tn7th__f-PQgl5hXtFUW5qOwJN-4vs48x_D6g/viewform?usp=dialog">こちら</a></p>
+      <p>申込受付は終了しました。<br>たくさんのお申し込みをいただきありがとうございました。</p>
+
+
+      <p> mruby Girls Matsue 1stは以下のすばらしいパートナーとの共同開催です。</p>
+      <p>
+        <a href="http://ruby-no-kai.org">日本Rubyの会</a>は、Rubyの利用者の支援とRuby(とRubyのライブラリ)開発者の支援を目的とした一般社団法人です。
+        現在は、ドキュメントの整備や、イベントへの参加協力等を中心に活動しています。
+      </p>
+      <p>
+        <b>【パートナー募集】</b><br>
+        Matsue 1stでは、ご支援いただけるパートナーを募集しています。
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeQn791wN5cpliEydjaHqTykHE5xkjjmxDKVDHWDHq42WDm1g/viewform?usp=dialog">こちら</a>からお申し込みください。
+      </p>
+      <p>
+        <b>【見学希望のお申し込み】</b><br>
+        Matsue 1stでは、若干名のご見学もできます。ご興味のある方は、
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeleApUescLzKtXVRLT_Yh9yboRhsIJ3QODlt3S_-YxeuVPkQ/viewform?usp=dialog">こちら</a>からお申し込みください。
+      </p>
     </div>
   </div>
 
