@@ -192,6 +192,21 @@ rake flash
 以下のエラーが出た場合は
 
 ```
+/dev/ttyUSB0 failed to connect: Could not open /dev/ttyUSB0, the port is busy or doesn't exist.
+([Errno 13] could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0')
+
+Hint: Try to add user into dialout or uucp group.
+```
+
+以下を実行して再度WSLのターミナルを開き、 `rake flash` してください
+
+```bash
+sudo adduser $USER dialout
+```
+
+以下のエラーが出た場合は
+
+```
 A fatal error occurred: Unable to verify flash chip connection
 ```
 
