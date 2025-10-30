@@ -56,7 +56,7 @@ cd ~/esp/esp-idf
 
 ESP-IDFの環境変数を読み込みます
 ```bash
-. $HOME/esp/esp-idf/export.sh
+. ~/esp/esp-idf/export.sh
 ```
 
 
