@@ -3,7 +3,7 @@ layout: default
 permalink: /events/index
 title: イベント情報
 ---
-## 近日開催のイベント
+## 近日開催予定のイベント
 
 <div class="events-grid">
   <div class="event-card">
@@ -16,7 +16,7 @@ title: イベント情報
       <div class="event-tags">
         <span class="event-tag">ATOM Matrix</span>
       </div>
-      <a href="/events/2025-11-08-matsue_1st" class="event-link">詳細を見る →</a>
+      <a href="/events/2025-11-08-matsue_1st/" class="event-link">詳細を見る →</a>
     </div>
   </div>
 
