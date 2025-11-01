@@ -92,6 +92,12 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
 
 
       <p> mruby Girls Matsue 1stは以下のすばらしいパートナーとの共同開催です。</p>
+
+      <p>
+        <a href="https://www.netlab.jp/" style="float:right; margin:0 0 0 15px; border:0; "><img src="/images/matsue1st/nacl-logo-simple.png" alt="NaCl" width="200"></a>
+        <a href="https://www.netlab.jp/">ネットワーク応用通信研究所(NaCl)</a>はまつもとゆきひろさんと共に、2001年からお客様のためにRubyアプリケーションを開発してきました。NaClにはRubyが好きなメンバーが集まっています。
+      </p>
+
       <p>
         <a href="http://ruby-no-kai.org">日本Rubyの会</a>は、Rubyの利用者の支援とRuby(とRubyのライブラリ)開発者の支援を目的とした一般社団法人です。
         現在は、ドキュメントの整備や、イベントへの参加協力等を中心に活動しています。
