@@ -31,7 +31,7 @@ wsl
 WSL内で以下のコマンドを実行：
 ```bash
 sudo apt-get update
-sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+sudo apt-get install -y git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
 
 ### 1.3 ESP-IDFのインストール
@@ -56,7 +56,7 @@ cd ~/esp/esp-idf
 
 ESP-IDFの環境変数を読み込みます
 ```bash
-. $HOME/esp/esp-idf/export.sh
+. ~/esp/esp-idf/export.sh
 ```
 
 
@@ -187,6 +187,21 @@ ls /dev/tty*
 WSLのターミナルで､以下を実行
 ```bash
 rake flash
+```
+
+以下のエラーが出た場合は
+
+```
+/dev/ttyUSB0 failed to connect: Could not open /dev/ttyUSB0, the port is busy or doesn't exist.
+([Errno 13] could not open port /dev/ttyUSB0: [Errno 13] Permission denied: '/dev/ttyUSB0')
+
+Hint: Try to add user into dialout or uucp group.
+```
+
+以下を実行して再度WSLのターミナルを開き、 `rake flash` してください
+
+```bash
+sudo adduser $USER dialout
 ```
 
 以下のエラーが出た場合は
