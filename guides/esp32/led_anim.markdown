@@ -169,7 +169,7 @@ rmt = RMTDriver.new(27)
 led = WS2812.new(rmt)
 
 # Rubyパターン
-pixels = [
+ruby = [
   [0x000000, 0xFF0000, 0xFF0000, 0xFF0000, 0x000000],
   [0xFF0000, 0xFF0000, 0xFF0000, 0xFF0000, 0xFF0000],
   [0x000000, 0xFF0000, 0xFF0000, 0xFF0000, 0x000000],
@@ -208,6 +208,7 @@ loop do
     sleep 0.3
   end
 end
+
 # 最後に消灯
 led.show_hex(*Array.new(25, 0x000000))
 ```
