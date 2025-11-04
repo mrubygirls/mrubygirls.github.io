@@ -139,5 +139,21 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
       organizer
       <small>@chobishiba</small>
     </a>
+
+    <a href="https://x.com/sada4" class="coach">
+      <img src="https://www.gravatar.com/avatar/ed009bd803ad84352205f2eb4a978cb5">
+      Akihiro Sada
+      <br/>
+      coach
+      <small>@sada4</small>
+    </a>
+
+    <a href="https://x.com/nishidayuya" class="coach">
+      <img src="https://github.com/nishidayuya.png">
+      Yuya Nishida
+      <br/>
+      coach
+      <small>@nishidayuya</small>
+    </a>
   </div>
 </div>
