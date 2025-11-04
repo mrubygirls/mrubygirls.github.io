@@ -20,7 +20,7 @@ mruby Girlsは、組み込みプログラミングをはじめたい女性が、
       <h3 class="event-title">Matsue 1st</h3>
       <p class="event-date">2025年11月8日(土)</p>
       <p class="event-desc">ATOM Matrixを使ってmrubyを体験します。</p>
-      <a href="/events/2025-11-08-matsue_1st/" class="event-link">詳細を見る →</a>
+      <a href="/events/2025-11-08-matsue_1st" class="event-link">詳細を見る →</a>
     </div>
   </div>
   <!-- 他のイベントカードも追加 -->
