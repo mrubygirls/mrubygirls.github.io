@@ -137,9 +137,8 @@ git submodule update --init --recursive
 cd ../..
 ```
 
-
 * 📝 なぜ --recursive が必要？
-     * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。--recursiveを付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
+  * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。--recursiveを付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
 
 ### 2.2 Rubyとbundlerの確認
 
