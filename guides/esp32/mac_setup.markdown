@@ -287,7 +287,7 @@ rake clean
 rake setup_esp32
 ```
 
-## Undefined Reference Error
+### Undefined Reference Error
 
 ```
 rake setup_esp32
