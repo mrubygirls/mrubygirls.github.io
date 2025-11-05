@@ -21,4 +21,4 @@ ESP32ベースのマイコンで、PicoRuby（軽量Ruby）を動かせる環境
   - [6軸モーションセンサー](/guides/esp32/sensor_g_accel)
   - 組み合わせて使ってみよう
     - [LEDアニメーション](/guides/esp32/led_anim)
-    - [デジタル水準器]((/guides/esp32/tilt_led))
+    - [デジタル水準器](/guides/esp32/tilt_led)
