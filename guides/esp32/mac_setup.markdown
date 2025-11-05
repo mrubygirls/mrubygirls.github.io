@@ -83,9 +83,6 @@ cd ~/esp
 git clone -b v5.4.2 --recursive https://github.com/espressif/esp-idf.git
 ```
 
-**なぜ `--recursive` が必要？**
-ESP-IDFは多くのサブモジュール（別のGitリポジトリ）を含んでいます。`--recursive`を付けないと、これらのサブモジュールがダウンロードされず、ビルド時にエラーになります。
-
 ESP32用ツールのインストール
 
 ```bash
@@ -132,17 +129,14 @@ git clone --recursive https://github.com/picoruby/R2P2-ESP32.git
 cd R2P2-ESP32
 ```
 
-動作確認済みバージョンに固定
+動作確認済みバージョンに固定、サブモジュールも同じ時点の状態に更新
 ```bash
-cd components/picoruby-esp32
-git checkout 344f189
+git checkout 80ebc33
 git submodule update --init --recursive
-cd ../..
 ```
 
-
 * 📝 なぜ --recursive が必要？
-     * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。--recursiveを付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
+  * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。--recursiveを付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
 
 ### 2.2 Rubyとbundlerの確認
 
