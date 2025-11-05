@@ -83,9 +83,6 @@ cd ~/esp
 git clone -b v5.4.2 --recursive https://github.com/espressif/esp-idf.git
 ```
 
-**なぜ `--recursive` が必要？**
-ESP-IDFは多くのサブモジュール（別のGitリポジトリ）を含んでいます。`--recursive`を付けないと、これらのサブモジュールがダウンロードされず、ビルド時にエラーになります。
-
 ESP32用ツールのインストール
 
 ```bash
