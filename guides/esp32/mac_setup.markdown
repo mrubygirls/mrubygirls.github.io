@@ -132,9 +132,17 @@ git clone --recursive https://github.com/picoruby/R2P2-ESP32.git
 cd R2P2-ESP32
 ```
 
-**なぜ `--recursive` が必要？**
-R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。`--recursive`を付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
+動作確認済みバージョンに固定
+```bash
+cd components/picoruby-esp32
+git checkout 344f189
+git submodule update --init --recursive
+cd ../..
+```
 
+
+* 📝 なぜ --recursive が必要？
+     * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。--recursiveを付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
 
 ### 2.2 Rubyとbundlerの確認
 
@@ -278,6 +286,36 @@ export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
 rake clean
 rake setup_esp32
 ```
+
+### Undefined Reference Error
+
+```
+rake setup_esp32
+```
+を実行した際に以下のエラーが出た場合
+```
+Undefined symbols for architecture arm64:
+  "_ip_data", referenced from:
+      _mrb_piconet_getaddrinfo in piconet.o
+  "_lwip_stats", referenced from:
+      _mrb_piconet_debug in piconet.o
+ld: symbol(s) not found for architecture arm64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+rake aborted!
+Command failed with status (1): [rake]
+```
+
+ホストビルドは失敗していますが、必要な依存関係の設定はエラー発生前に完了している状態なので、ターゲット設定を手動で実行します
+
+```
+idf.py set-target esp32
+```
+
+プロジェクトのビルド以降の手順に戻ってください
+```bash
+rake build
+```
+
 
 ## 参考リンク
 
