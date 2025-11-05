@@ -192,7 +192,6 @@ loop do
   
   pixels = Array.new(25, 0x000000)
   pixels[12] = 0x001E00
-  led.show_hex(*pixels)
 
   if accel[:x] > 0.3
     # 右に傾いた
@@ -217,7 +216,10 @@ loop do
     pixels[7] = 0x00001E
     if accel[:y] < -0.6
       pixels[2] = 0x00001E
+    end
   end
+
+  led.show_hex(*pixels)
   
   sleep_ms 200
 end
