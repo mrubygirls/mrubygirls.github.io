@@ -129,12 +129,10 @@ git clone --recursive https://github.com/picoruby/R2P2-ESP32.git
 cd R2P2-ESP32
 ```
 
-動作確認済みバージョンに固定
+動作確認済みバージョンに固定、サブモジュールも同じ時点の状態に更新
 ```bash
-cd components/picoruby-esp32
-git checkout 344f189
+git checkout 80ebc33
 git submodule update --init --recursive
-cd ../..
 ```
 
 * 📝 なぜ --recursive が必要？
