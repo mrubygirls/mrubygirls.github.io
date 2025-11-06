@@ -45,7 +45,14 @@ sns_message: 2025/11/08 mruby Girls Matsue 1st 開催!!!
           </div>
         </div>
         <div class="plan">
-          <div class="plan-time">10:35  ワークショップ</div>
+          <div class="plan-time">10:35  まつもとゆきひろさんのトーク</div>
+          <div class="plan-description">
+mrubyのお話
+          </div>
+        </div>
+
+        <div class="plan">
+          <div class="plan-time">11:00  ワークショップ</div>
           <div class="plan-description">
             自己紹介<br/>
             自分のPCに環境構築をしましょう!<br/>
