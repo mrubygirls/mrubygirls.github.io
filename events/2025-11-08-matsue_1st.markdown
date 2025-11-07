@@ -111,6 +111,11 @@ mrubyのお話
       </p>
 
       <p>
+        <a href="htps://www.carrot.co.jp/" style="float:right; margin:0 0 0 15px; border:0; "><img src="/images/matsue1st/KCSC.png" alt="株式会社ケーシーエスキャロット" width="200"></a>
+        <a href="https://www.carrot.co.jp/">株式会社ケーシーエスキャロット</a>は、「Create(創造)・Cooperate(協力)・Coordinate(調和)・Collaborate(共争)」を経営ビジョンとして、デジタル放送機器、音楽・ニュースの配信分野、AV機器の組込みソフトや、Webアプリケーション開発などを取り組んでおります。
+      </p>
+
+      <p>
         <a href="http://ruby-no-kai.org">日本Rubyの会</a>は、Rubyの利用者の支援とRuby(とRubyのライブラリ)開発者の支援を目的とした一般社団法人です。
         現在は、ドキュメントの整備や、イベントへの参加協力等を中心に活動しています。
       </p>
