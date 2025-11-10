@@ -172,5 +172,13 @@ mrubyのお話
       coach
       <small>@nishidayuya</small>
     </a>
+
+    <a href="https://x.com/yhara" class="coach">
+      <img src="https://avatars.githubusercontent.com/u/12285?v=4">
+      Yutaka Hara
+      <br/>
+      coach
+      <small>@yhara</small>
+    </a>
   </div>
 </div>
