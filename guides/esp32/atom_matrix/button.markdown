@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/button
+permalink: /guides/esp32/atom_matrix/button
 title: ワークショップガイド
 ---
 

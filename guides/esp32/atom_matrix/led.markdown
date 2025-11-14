@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/led
+permalink: /guides/esp32/atom_matrix/led
 title: LED
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/sensor_g_accel
+permalink: /guides/esp32/atom_matrix/sensor_g_accel
 title: 6軸モーションセンサー
 ---
 

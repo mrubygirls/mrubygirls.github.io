@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/tilt_led
+permalink: /guides/esp32/atom_matrix/tilt_led
 title: デジタル水準器
 ---
 

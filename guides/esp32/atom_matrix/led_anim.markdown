@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/led_anim
+permalink: /guides/esp32/atom_matrix/led_anim
 title: LEDアニメーション
 ---
 
