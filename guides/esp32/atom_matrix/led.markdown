@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/led
+permalink: /guides/esp32/atom_matrix/led
 title: LED
 ---
 
@@ -48,7 +48,7 @@ rake clean build
 この内容でマイコンに書き込みます。
 
 ```
-rake flash
+ESPBAUD=115200 rake flash
 ```
 
 再度シリアルモニターを立ち上げます。
@@ -157,7 +157,7 @@ led.show_rgb(*pixels)
 PCに保存したファイルをマイコンに転送します
 
 ```
-rake flash
+ESPBAUD=115200 rake flash
 ```
 
 もう一度シリアルモニターを立ち上げます

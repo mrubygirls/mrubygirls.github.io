@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/led_anim
+permalink: /guides/esp32/atom_matrix/led_anim
 title: LEDアニメーション
 ---
 
@@ -41,7 +41,7 @@ rake clean build
 この内容でマイコンに書き込みます。
 
 ```
-rake flash
+ESPBAUD=115200 rake flash
 ```
 
 再度シリアルモニターを立ち上げます。
@@ -157,7 +157,7 @@ led.show_hex(*Array.new(25, 0x000000))
 
 `app.rb` という名前のファイルがあれば、電源が入るとそのプログラムが自動的に実行されます
 
-`storage/home/` に `app.rb` という名前で保存して、 `rake flash` で書き込んでみよう
+`storage/home/` に `app.rb` という名前で保存して、 `ESPBAUD=115200 rake flash` で書き込んでみよう
 
 
 ## Tips

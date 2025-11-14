@@ -3,7 +3,7 @@ layout: default
 permalink: /events/index
 title: イベント情報
 ---
-## 近日開催予定のイベント
+## 過去のイベント
 
 <div class="events-grid">
   <div class="event-card">

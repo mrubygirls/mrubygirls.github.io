@@ -1,12 +1,12 @@
 ---
 layout: default
-permalink: /guides/esp32/button
+permalink: /guides/esp32/atom_matrix/button
 title: ワークショップガイド
 ---
 
 # ボタン
 
-AtomMatrixにはボタンが内臓されています。ディスプレイ部分についています。試しに軽く押してみてください
+Atom Matrixにはボタンが内臓されています。ディスプレイ部分についています。試しに軽く押してみてください
 
 これから、このボタンを使っていきます
 
