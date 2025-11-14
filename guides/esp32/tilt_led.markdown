@@ -43,7 +43,7 @@ rake clean build
 この内容でマイコンに書き込みます
 
 ```
-rake flash
+ESPBAUD=115200 rake flash
 ```
 
 再度シリアルモニターを立ち上げます
@@ -95,7 +95,7 @@ loop do
 end
 ```
 
-シリアルモニターを `Ctr+]` で終了し、 `rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ
+シリアルモニターを `Ctr+]` で終了し、 `ESPBAUD=115200 rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ
 
 転送したファイルを実行してください
 ```
@@ -156,7 +156,7 @@ led.show_hex(*Array.new(25, 0x000000))
 ```
 
 
-シリアルモニターを `Ctr+]` で終了し、 `rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ
+シリアルモニターを `Ctr+]` で終了し、 `ESPBAUD=115200 rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ
 
 転送したファイルを実行してください
 ```
@@ -229,7 +229,7 @@ end
 led.show_hex(*Array.new(25, 0x000000))
 ```
 
-シリアルモニターを `Ctr+]` で終了し、 `rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ
+シリアルモニターを `Ctr+]` で終了し、 `ESPBAUD=115200 rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ
 
 転送したファイルを実行してください
 ```
@@ -254,4 +254,4 @@ led.show_hex(*Array.new(25, 0x000000))
 
 `app.rb` という名前のファイルがあれば、電源が入るとそのプログラムが自動的に実行されます
 
-`storage/home/` に `app.rb` という名前で保存して、 `rake flash` で書き込んでみよう
+`storage/home/` に `app.rb` という名前で保存して、 `ESPBAUD=115200 rake flash` で書き込んでみよう
