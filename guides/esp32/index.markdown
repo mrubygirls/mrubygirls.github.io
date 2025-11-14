@@ -15,7 +15,7 @@ ESP32ベースのマイコンで、PicoRuby（軽量Ruby）を動かせる環境
 - [irb](/guides/esp32/irb)
 
 ## センサーを使って自分だけのデバイスを作ろう
-- AtomMatrix
+- [Atom Matrix](/glossary/atom_matrix)
   - [ボタン](/guides/esp32/button)
   - [LED](/guides/esp32/led)
   - [6軸モーションセンサー](/guides/esp32/sensor_g_accel)

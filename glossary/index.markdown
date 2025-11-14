@@ -5,7 +5,7 @@ title: 用語集
 ---
 # 用語集
 
-準備中です
+[Atom Matrix](/glossary/atom_matrix)
 
 <!--
 <a href="#あ行">あ行</a>
