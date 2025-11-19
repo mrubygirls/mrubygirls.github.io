@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: /guides/esp32/sensor_g_accel
+permalink: /guides/esp32/atom_matrix/sensor_g_accel
 title: 6軸モーションセンサー
 ---
 
@@ -44,7 +44,7 @@ rake clean build
 この内容でマイコンに書き込みます。
 
 ```
-rake flash
+ESPBAUD=115200 rake flash
 ```
 
 再度シリアルモニターを立ち上げます。
@@ -82,7 +82,7 @@ loop do
 end
 ```
 
-`rake flash`で書き込み、`rake monitor`でシリアルモニターを立ち上げてください
+`rESPBAUD=115200 rake flash`で書き込み、`rake monitor`でシリアルモニターを立ち上げてください
 
 
 シリアルモニターで実行します
@@ -153,7 +153,7 @@ loop do
 end
 ```
 
-`rake flash`で書き込み、`rake monitor`でシリアルモニターを立ち上げてください
+`ESPBAUD=115200 rake flash`で書き込み、`rake monitor`でシリアルモニターを立ち上げてください
 
 
 
