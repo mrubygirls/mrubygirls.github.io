@@ -82,7 +82,7 @@ loop do
 end
 ```
 
-`rESPBAUD=115200 rake flash`で書き込み、`rake monitor`でシリアルモニターを立ち上げてください
+`ESPBAUD=115200 rake flash`で書き込み、`rake monitor`でシリアルモニターを立ち上げてください
 
 
 シリアルモニターで実行します
