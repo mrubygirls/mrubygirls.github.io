@@ -129,8 +129,8 @@ git clone --recursive https://github.com/picoruby/R2P2-ESP32.git
 cd R2P2-ESP32
 ```
 
-* 📝 なぜ --recursive が必要？
-  * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。--recursiveを付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
+* 📝 なぜ `--recursive` が必要？
+  * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。`--recursive`を付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
 
 ### 2.2 Rubyとbundlerの確認
 
