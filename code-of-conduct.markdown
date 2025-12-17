@@ -41,7 +41,7 @@ mruby Girlsは、すべての参加者が安心して学び、楽しめる場で
 ### お問い合わせ先
 
 * [mruby Girls 運営チーム](/about/)へのメーリングリスト
-  * mrubygirls at googlegroups.com (※ at を @ に置き換え)
+  * mrubygirls.organizers at gmail.com (※ at を @ に置き換え)
   * 上記メーリングリストへ送られたメールは mruby Girls 運営チームメンバーのみが受け取ります。
 * 相談しやすいmruby Girls 運営チームメンバーのいずれか
 
