@@ -132,6 +132,12 @@ cd R2P2-ESP32
 * 📝 なぜ `--recursive` が必要？
   * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。`--recursive`を付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
 
+動作確認済み(2025/11/14時点)バージョンに固定、サブモジュールも同じ時点の状態に更新してください
+```bash
+git checkout d7c61ab
+git submodule update --init --recursive
+```
+
 ### 2.2 Rubyとbundlerの確認
 
 macOSには標準でRubyがインストールされています
@@ -302,16 +308,6 @@ idf.py set-target esp32
 プロジェクトのビルド以降の手順に戻ってください
 ```bash
 rake build
-```
-
-### rake build や rake monitor でエラーが出る場合
-一時的に動かなくなっている可能性があります
-
-2.1 プロジェクトのクローン の後
-2025/11/14時点動作確認済みバージョンに固定、サブモジュールも同じ時点の状態に更新してください
-```bash
-git checkout d7c61ab
-git submodule update --init --recursive
 ```
 
 ## 参考リンク
