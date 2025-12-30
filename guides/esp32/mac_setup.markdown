@@ -123,20 +123,17 @@ ls /dev/cu.*
 
 ### 2.1 プロジェクトのクローン
 
+動作確認済みバージョンに固定、サブモジュールも同じ時点の状態に更新してください
+
 ```bash
 cd ~/esp
-git clone --recursive https://github.com/picoruby/R2P2-ESP32.git
+git clone --branch 0.1.1 --recursive https://github.com/picoruby/R2P2-ESP32.git
 cd R2P2-ESP32
 ```
 
 * 📝 なぜ `--recursive` が必要？
   * R2P2-ESP32はPicoRubyをサブモジュールとして含んでいます。`--recursive`を付けないと、PicoRuby本体がダウンロードされず、ビルドできません。
 
-動作確認済み(2025/11/14時点)バージョンに固定、サブモジュールも同じ時点の状態に更新してください
-```bash
-git checkout d7c61ab
-git submodule update --init --recursive
-```
 
 ### 2.2 Rubyとbundlerの確認
 
