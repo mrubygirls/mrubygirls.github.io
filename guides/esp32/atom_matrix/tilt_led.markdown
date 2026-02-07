@@ -26,7 +26,7 @@ PCで `R2P2-ESP32/components/picoruby-esp32/picoruby/build_config/xtensa-esp.rb`
 ```ruby
   conf.gem core: 'picoruby-pwm'
 
-  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'main' # 追加
+  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'release/v0.1.0' # 追加
   conf.gem github: 'bash0C7/picoruby-mpu6886', branch: 'main' # 追加
 
   conf.picoruby(alloc_libc: false)
