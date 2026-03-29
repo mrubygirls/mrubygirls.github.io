@@ -25,7 +25,7 @@ PCで `R2P2-ESP32/components/picoruby-esp32/picoruby/build_config/xtensa-esp.rb`
 ```ruby
   conf.gem core: 'picoruby-pwm'
 
-  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'release/v0.1.0' # 追加
+  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'main' # 追加
 
   conf.picoruby(alloc_libc: false)
 ```
@@ -54,8 +54,7 @@ rake monitor
 ```ruby
 require 'ws2812'
 
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
+led = WS2812.new(pin: 27, num: 25)
 
 # Rubyロゴを1つの位置に表示
 pixels = [
@@ -65,7 +64,8 @@ pixels = [
   0x000000, 0x000000, 0xFF0000, 0x000000, 0x000000,
   0x000000, 0x000000, 0x000000, 0x000000, 0x000000
 ]
-led.show_hex(*pixels)
+pixels.each_with_index { |c, i| led.set_hex(i, c) }
+led.show
 ```
 
 ## 3. 上下に動かす
@@ -74,8 +74,7 @@ led.show_hex(*pixels)
 ```ruby
 require 'ws2812'
 
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
+led = WS2812.new(pin: 27, num: 25)
 
 # Rubyロゴを1つの位置に表示
 up_pixels = [
@@ -95,9 +94,11 @@ down_pixels = [
 ]
 
 3.times do
-  led.show_hex(*up_pixels)
+  up_pixels.each_with_index { |c, i| led.set_hex(i, c) }
+  led.show
   sleep 0.3
-  led.show_hex(*down_pixels)
+  down_pixels.each_with_index { |c, i| led.set_hex(i, c) }
+  led.show
   sleep 0.3
 end
 ```
@@ -108,8 +109,7 @@ end
 require 'ws2812'
 
 button = GPIO.new(39, GPIO::IN)
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
+led = WS2812.new(pin: 27, num: 25)
 
 # Rubyロゴを1つの位置に表示
 up_pixels = [
@@ -130,14 +130,16 @@ down_pixels = [
 
 loop do
   break if button.read == 0
-  led.show_hex(*up_pixels)
+  up_pixels.each_with_index { |c, i| led.set_hex(i, c) }
+  led.show
   sleep 0.3
-  led.show_hex(*down_pixels)
+  down_pixels.each_with_index { |c, i| led.set_hex(i, c) }
+  led.show
   sleep 0.3
 end
 
 # 最後に消灯
-led.show_hex(*Array.new(25, 0x000000))
+led.clear
 ```
 
 ## 4. カスタマイズしよう
@@ -167,8 +169,7 @@ led.show_hex(*Array.new(25, 0x000000))
 require 'ws2812'
 
 button = GPIO.new(39, GPIO::IN)
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
+led = WS2812.new(pin: 27, num: 25)
 
 # Rubyパターン
 ruby = [
@@ -179,31 +180,31 @@ ruby = [
 ]
 
 def draw_pattern(led, pattern, start_row, rows)
-  pixels = Array.new(25, 0x000000)
-  
+  led.fill(0, 0, 0)
+
   rows.times do |y|
     actual_row = start_row + y
     if actual_row >= 0 && actual_row < 5
       5.times do |x|
         index = actual_row * 5 + x
-        pixels[index] = pattern[y][x]
+        led.set_hex(index, pattern[y][x])
       end
     end
   end
-  
-  led.show_hex(*pixels)
+
+  led.show
 end
 
 # Rubyロゴを上下に移動
 loop do
   break if button.read == 0
-  
+
   # 上から下へ
   0.upto(1) do |row|
     draw_pattern(led, ruby, row, 4)
     sleep 0.3
   end
-  
+
   # 下から上へ
   1.downto(0) do |row|
     draw_pattern(led, ruby, row, 4)
@@ -212,5 +213,5 @@ loop do
 end
 
 # 最後に消灯
-led.show_hex(*Array.new(25, 0x000000))
+led.clear
 ```

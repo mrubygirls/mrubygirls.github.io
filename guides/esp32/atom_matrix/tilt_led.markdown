@@ -26,7 +26,7 @@ PCで `R2P2-ESP32/components/picoruby-esp32/picoruby/build_config/xtensa-esp.rb`
 ```ruby
   conf.gem core: 'picoruby-pwm'
 
-  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'release/v0.1.0' # 追加
+  conf.gem github: 'ksbmyk/picoruby-ws2812', branch: 'main' # 追加
   conf.gem github: 'bash0C7/picoruby-mpu6886', branch: 'main' # 追加
 
   conf.picoruby(alloc_libc: false)
@@ -122,37 +122,37 @@ i2c = I2C.new(
 mpu = MPU6886.new(i2c)
 button = GPIO.new(39, GPIO::IN)
 
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
+led = WS2812.new(pin: 27, num: 25)
+led.brightness = 50
 # 最初に全消灯
-led.show_hex(*Array.new(25, 0x000000))
+led.clear
 
 loop do
-  break if button.read == 0 
+  break if button.read == 0
 
   accel = mpu.acceleration
-  
-  pixels = Array.new(25, 0x000000)
+
+  led.fill(0, 0, 0)
   # 中心のみ緑で光らせる
-  pixels[12] = 0x001E00
-  led.show_hex(*pixels)
+  led.set_hex(12, 0x001E00)
+  led.show
 
   if accel[:x] > 0.3
     puts "右に傾いています！ X軸: #{accel[:x]}"
   elsif accel[:x] < -0.3
     puts "左に傾いています！ X軸: #{accel[:x]}"
   end
-  
+
   if accel[:y] > 0.3
     puts "前に傾いています！ Y軸: #{accel[:y]}"
   elsif accel[:y] < -0.3
     puts "後ろに傾いています！ Y軸: #{accel[:y]}"
   end
-  
+
   sleep_ms 200
 end
 
-led.show_hex(*Array.new(25, 0x000000))
+led.clear
 ```
 
 
@@ -183,50 +183,50 @@ i2c = I2C.new(
 mpu = MPU6886.new(i2c)
 button = GPIO.new(39, GPIO::IN)
 
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
-led.show_hex(*Array.new(25, 0x000000))
+led = WS2812.new(pin: 27, num: 25)
+led.brightness = 50
+led.clear
 
 loop do
-  break if button.read == 0 
+  break if button.read == 0
 
   accel = mpu.acceleration
-  
-  pixels = Array.new(25, 0x000000)
-  pixels[12] = 0x001E00
+
+  led.fill(0, 0, 0)
+  led.set_hex(12, 0x001E00)
 
   if accel[:x] > 0.3
     # 右に傾いた
-    pixels[13] = 0x1E0000
+    led.set_hex(13, 0x1E0000)
     if accel[:x] > 0.6
-      pixels[14] = 0x1E0000
+      led.set_hex(14, 0x1E0000)
     end
   elsif accel[:x] < -0.3
     # 左に傾いた
-    pixels[11] = 0x1E0000
+    led.set_hex(11, 0x1E0000)
     if accel[:x] < -0.6
-      pixels[10] = 0x1E0000
-    end
-  end
-  
-  if accel[:y] > 0.3
-    pixels[17] = 0x00001E
-    if accel[:y] > 0.6
-      pixels[22] = 0x00001E
-    end
-  elsif accel[:y] < -0.3
-    pixels[7] = 0x00001E
-    if accel[:y] < -0.6
-      pixels[2] = 0x00001E
+      led.set_hex(10, 0x1E0000)
     end
   end
 
-  led.show_hex(*pixels)
-  
+  if accel[:y] > 0.3
+    led.set_hex(17, 0x00001E)
+    if accel[:y] > 0.6
+      led.set_hex(22, 0x00001E)
+    end
+  elsif accel[:y] < -0.3
+    led.set_hex(7, 0x00001E)
+    if accel[:y] < -0.6
+      led.set_hex(2, 0x00001E)
+    end
+  end
+
+  led.show
+
   sleep_ms 200
 end
 
-led.show_hex(*Array.new(25, 0x000000))
+led.clear
 ```
 
 シリアルモニターを `Ctr+]` で終了し、 `ESPBAUD=115200 rake flash` で書き込み、 `rake monitor` でシリアルモニタで立ち上げ

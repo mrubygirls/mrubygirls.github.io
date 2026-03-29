@@ -74,50 +74,59 @@ irb>
 ```ruby
 require 'ws2812'
 
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
+led = WS2812.new(pin: 27, num: 25)
 
-led.show_rgb([255, 0, 0])
+led.set_rgb(0, 255, 0, 0)
+led.show
 ```
 
 左上、0番目のLEDが赤になりました
 
-show_hexメソッドを使うと16進でも色を指定できます
+set_hexメソッドを使うと16進でも色を指定できます
 ```ruby
-led.show_hex(0xFF0000)
+led.set_hex(0, 0xFF0000)
+led.show
 ```
 
 
 好きな色に変えてみましょう
 ```
 # RGB値で指定
-led.show_rgb([0, 255, 0])    # 緑
-led.show_rgb([0, 0, 255])    # 青
-led.show_rgb([255, 255, 0])  # 黄色
-led.show_rgb([255, 0, 255])  # マゼンタ
+led.set_rgb(0, 0, 255, 0)    # 緑
+led.show
+led.set_rgb(0, 0, 0, 255)    # 青
+led.show
+led.set_rgb(0, 255, 255, 0)  # 黄色
+led.show
+led.set_rgb(0, 255, 0, 255)  # マゼンタ
+led.show
 
 # または16進数で
-led.show_hex(0x00FF00)  # 緑
-led.show_hex(0x0000FF)  # 青
+led.set_hex(0, 0x00FF00)  # 緑
+led.show
+led.set_hex(0, 0x0000FF)  # 青
+led.show
 ```
 
-複数点灯させます。指定した前から順番に0番目、2番目と解釈されていきます。
+複数点灯させます。第1引数にLEDのインデックスを指定します。
 
 ```
 # RGB値で指定
-led.show_rgb([255, 0, 0], [0, 255, 0], [0, 0, 255])
+led.set_rgb(0, 255, 0, 0)
+led.set_rgb(1, 0, 255, 0)
+led.set_rgb(2, 0, 0, 255)
+led.show
 
 # または16進数で
-led.show_hex(0xFF0000, 0x00FF00, 0x0000FF)
+led.set_hex(0, 0xFF0000)
+led.set_hex(1, 0x00FF00)
+led.set_hex(2, 0x0000FF)
+led.show
 ```
 
-黒を指定することで消灯させることができます。
+clearメソッドで全てのLEDを消灯できます。
 ```
-# RGB値で指定
-led.show_rgb([0, 0, 0], [0, 0, 0], [0, 0, 0])
-
-# または16進数で
-led.show_hex(0x000000, 0x000000, 0x000000)
+led.clear
 ```
 
 ## 4. ファイルを送る
@@ -132,25 +141,14 @@ PCで以下の内容のファイルを作り、 `R2P2-ESP32/storage/home/` の�
 ```ruby
 require 'ws2812'
 
-rmt = RMTDriver.new(27)
-led = WS2812.new(rmt)
-
-# 配列を使って全LEDを制御
-pixels = [ # 全て消灯
-  [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
-  [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
-  [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
-  [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
-  [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0],
-]
+led = WS2812.new(pin: 27, num: 25)
 
 # 四隅だけ光らせる
-pixels[0] = [255, 0, 0]    # 左上
-pixels[4] = [0, 255, 0]    # 右上
-pixels[20] = [0, 0, 255]   # 左下
-pixels[24] = [255, 255, 0] # 右下
-
-led.show_rgb(*pixels)
+led.set_rgb(0, 255, 0, 0)     # 左上
+led.set_rgb(4, 0, 255, 0)     # 右上
+led.set_rgb(20, 0, 0, 255)    # 左下
+led.set_rgb(24, 255, 255, 0)  # 右下
+led.show
 ```
 
 
