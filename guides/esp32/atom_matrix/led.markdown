@@ -75,7 +75,7 @@ irb>
 require 'ws2812'
 
 led = WS2812.new(pin: 27, num: 25)
-led.brightness = 30
+led.brightness = 20
 
 led.set_rgb(0, 255, 0, 0)
 led.show
@@ -143,7 +143,7 @@ PCで以下の内容のファイルを作り、 `R2P2-ESP32/storage/home/` の�
 require 'ws2812'
 
 led = WS2812.new(pin: 27, num: 25)
-led.brightness = 30
+led.brightness = 20
 
 # 四隅だけ光らせる
 led.set_rgb(0, 255, 0, 0)     # 左上
