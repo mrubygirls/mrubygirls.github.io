@@ -123,7 +123,7 @@ mpu = MPU6886.new(i2c)
 button = GPIO.new(39, GPIO::IN)
 
 led = WS2812.new(pin: 27, num: 25)
-led.brightness = 30
+led.brightness = 20
 # 最初に全消灯
 led.clear
 
@@ -184,7 +184,7 @@ mpu = MPU6886.new(i2c)
 button = GPIO.new(39, GPIO::IN)
 
 led = WS2812.new(pin: 27, num: 25)
-led.brightness = 30
+led.brightness = 20
 led.clear
 
 loop do
