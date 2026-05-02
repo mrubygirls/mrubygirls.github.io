@@ -55,6 +55,7 @@ rake monitor
 require 'ws2812'
 
 led = WS2812.new(pin: 27, num: 25)
+led.brightness = 30
 
 # Rubyロゴを1つの位置に表示
 pixels = [
@@ -75,6 +76,7 @@ led.show
 require 'ws2812'
 
 led = WS2812.new(pin: 27, num: 25)
+led.brightness = 30
 
 # Rubyロゴを1つの位置に表示
 up_pixels = [
@@ -110,6 +112,7 @@ require 'ws2812'
 
 button = GPIO.new(39, GPIO::IN)
 led = WS2812.new(pin: 27, num: 25)
+led.brightness = 30
 
 # Rubyロゴを1つの位置に表示
 up_pixels = [
@@ -170,6 +173,7 @@ require 'ws2812'
 
 button = GPIO.new(39, GPIO::IN)
 led = WS2812.new(pin: 27, num: 25)
+led.brightness = 30
 
 # Rubyパターン
 ruby = [
